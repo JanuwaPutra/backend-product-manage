@@ -19,9 +19,9 @@ const store = new sessionStore({
 
 
 
-(async()=>{
-    await db.sync();
-})();
+// (async()=>{
+//     await db.sync();
+// })();
 //npm run nodemon
 
 
