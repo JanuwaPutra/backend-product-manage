@@ -1,0 +1,92 @@
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name" : "user",
+    "email" : "user@gmail.com",
+    "password" : "123456",
+    "confPassword" : "123456",
+    "role" : "user"
+
+}
+
+###
+
+GET http://localhost:5000/users
+
+###
+GET http://localhost:5000/users/a3ffb74d-95f6-413e-a767-92d3d6b0c2ae
+
+###
+
+PATCH http://localhost:5000/users/b11baf06-09af-4ad7-bde7-a8de7ee1299b
+Content-Type: application/json
+
+{
+    "name" : "admin update",
+    "email" : "admin@gmail.com",
+    "password" : "",
+    "confPassword" : "",
+    "role" : "admin"
+
+}
+
+###
+DELETE http://localhost:5000/users/b11baf06-09af-4ad7-bde7-a8de7ee1299b
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email" : "admin@gmail.com",
+    "password" : "123456"
+}
+ 
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email" : "user@gmail.com",
+    "password" : "123456"
+}
+ 
+###
+
+GET http://localhost:5000/me
+
+###
+DELETE http://localhost:5000/logout
+
+
+//PRODUK
+###
+GET http://localhost:5000/products
+
+###
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name" : "pensil",
+    "price" : "10000"
+    
+}
+
+###
+GET http://localhost:5000/products/8f50436c-f15b-46ed-9810-9649c3344758
+
+###
+PATCH  http://localhost:5000/products/8f50436c-f15b-46ed-9810-9649c3344758
+Content-Type: application/json
+
+{
+    "name" : "pensil Baru",
+    "price" : "12000"
+    
+}
+
+###
+
+DELETE   http://localhost:5000/products/8f50436c-f15b-46ed-9810-9649c3344758
